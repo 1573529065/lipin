@@ -11,6 +11,16 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+//Route::get('/', function () {
+//    return view('welcome');
+//});
+
+// 前台路由
+Route::group(['namespace' => 'Home'], function () {
+    Route::get('/', 'Index@index');
+});
+
+// 后台路由
+Route::group(['prefix' => 'admin', 'namespace' => 'Admin'], function () {
+    Route::get('index', 'Index@index');
 });
