@@ -15,12 +15,12 @@
 //    return view('welcome');
 //});
 
-// 前台路由
-Route::group(['namespace' => 'Home'], function () {
-    Route::get('/', 'Index@index');
-});
+//// 前台路由
+//Route::group(['namespace' => 'Home'], function () {
+//    Route::get('/', 'IndexController@index');
+//});
 
 // 后台路由
-Route::group(['prefix' => 'admin', 'namespace' => 'Admin'], function () {
-    Route::get('index', 'Index@index');
+Route::group(['middleware' => 'web'], function () {
+    Route::get('admin/index', 'Admin\IndexController@index');
 });

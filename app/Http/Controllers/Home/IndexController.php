@@ -7,9 +7,9 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
-class Index extends Controller
+class IndexController extends Controller
 {
     public function index(){
-        echo 'home Index index';
+        echo 'home IndexController index';
     }
 }
