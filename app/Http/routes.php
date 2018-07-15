@@ -23,4 +23,5 @@
 // 后台路由
 Route::group(['middleware' => 'web'], function () {
     Route::get('admin/index', 'Admin\IndexController@index');
+    Route::get('admin/welcome', 'Admin\IndexController@welcome');
 });
