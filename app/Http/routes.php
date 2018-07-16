@@ -21,7 +21,7 @@
 //});
 
 // 后台路由
-Route::group(['middleware' => 'web'], function () {
-    Route::get('admin/index', 'Admin\IndexController@index');
-    Route::get('admin/welcome', 'Admin\IndexController@welcome');
+Route::group(['middleware' => 'web','namespace' => 'Admin','prefix' => 'admin'], function () {
+    Route::get('index', 'IndexController@index');
+    Route::get('welcome', 'IndexController@welcome');
 });
