@@ -10,6 +10,7 @@ use App\Http\Controllers\Controller;
 class Index extends Controller
 {
     public function index(){
-        echo 'home Index index';
+
+        return view('home.index');
     }
 }
