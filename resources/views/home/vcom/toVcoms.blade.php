@@ -7,14 +7,14 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" href="/css/jquery.mobile-1.4.5.css" />
 	<script type="text/javascript"
-		src="/js/jquery.js"></script>
+		src="{{asset('home/js/jquery.js')}}"></script>
 	<script type="text/javascript"
-		src="/js/jquery.form.js"></script>
+		src="{{asset('home/js/jquery.form.js')}}"></script>
 	<script type="text/javascript"
-		src="/js/jquery.validate.min.js"></script>
+		src="{{asset('home/js/jquery.validate.min.js')}}"></script>
 	<script
-		src="/js/jquery.mobile-1.4.5.js"></script>
-	<script src="/js/common.js"></script>
+		src="{{asset('home/js/jquery.mobile-1.4.5.js')}}"></script>
+	<script src="{{asset('home/js/common.js')}}"></script>
 	<script>
 		
 	</script>
@@ -139,7 +139,7 @@
 		<div class="adDiv">
 
 				
-				<img src="/images/ad0.jpg" style="height:68px;width:99%;">
+				<img src="{{asset('home/images/ad0.jpg')}}" style="height:68px;width:99%;">
 				
 				
     	</div>
@@ -157,12 +157,12 @@
 			 	
 			 	<div class="ui-block-a" style="text-align:center;">
 						<a href="#showInfoPage" data-ajax="false"  data-rel="dialog" data-transition="flip">
-							<img src="/images/btn_bf1.png" style="width:50%;height:50%;">
+							<img src="{{asset('home/images/btn_bf1.png')}}" style="width:50%;height:50%;">
 						</a>
 					</div>
 					<div class="ui-block-b" style="text-align:center;">
 						<a href="/vcom/toFinishComp.php" data-ajax="false" data-rel="dialog" data-transition="flip">
-							<img src="/images/btn_bf2.png" style="width:50%;height:50%;">
+							<img src="{{asset('home/images/btn_bf2.png')}}" style="width:50%;height:50%;">
 						</a>
 					</div>
 			 	

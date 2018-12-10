@@ -8,14 +8,14 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="/css/jquery.mobile-1.4.5.css" />
 	<script type="text/javascript"
-		src="/js/jquery.js"></script>
+		src="{{asset('home/js/jquery.js')}}"></script>
 	<script type="text/javascript"
-		src="/js/jquery.form.js"></script>
+		src="{{asset('home/js/jquery.form.js')}}"></script>
 	<script type="text/javascript"
-		src="/js/jquery.validate.min.js"></script>
+		src="{{asset('home/js/jquery.validate.min.js')}}"></script>
 	<script
-		src="/js/jquery.mobile-1.4.5.js"></script>
-	<script src="/js/common.js"></script>
+		src="{{asset('home/js/jquery.mobile-1.4.5.js')}}"></script>
+	<script src="{{asset('home/js/common.js')}}"></script>
 <style>
 	*,body{
 		margin:0;
@@ -127,7 +127,7 @@
 	
 	<div data-role="footer" data-position="fixed">
 		<div style="width:100%;height:70px;">
-	   		<img src="/images/ad1.jpg" style="height:70px;width:100%;">
+	   		<img src="{{asset('home/images/ad1.jpg')}}" style="height:70px;width:100%;">
 	   </div>
 	</div>
 </div>

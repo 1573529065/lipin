@@ -10,14 +10,14 @@
 		<link rel="shortcut icon" href="/favicon.ico">
 		<link rel="stylesheet" href="/css/jquery.mobile-1.4.5.css" />
 	<script type="text/javascript"
-		src="/js/jquery.js"></script>
+		src="{{asset('home/js/jquery.js')}}"></script>
 	<script type="text/javascript"
-		src="/js/jquery.form.js"></script>
+		src="{{asset('home/js/jquery.form.js')}}"></script>
 	<script type="text/javascript"
-		src="/js/jquery.validate.min.js"></script>
+		src="{{asset('home/js/jquery.validate.min.js')}}"></script>
 	<script
-		src="/js/jquery.mobile-1.4.5.js"></script>
-	<script src="/js/common.js"></script>
+		src="{{asset('home/js/jquery.mobile-1.4.5.js')}}"></script>
+	<script src="{{asset('home/js/common.js')}}"></script>
 		<style>
 			.ui-li-static.ui-li-has-thumb {
    			 	padding-left: 5.25em;
@@ -110,7 +110,7 @@
 		
 			<section>
 				<div style="width:100%;height:20%;">
-					<img  src="/images/suppliers/0.jpg" style="width:100%;height:100%;">
+					<img  src="{{asset('home/images/suppliers/0.jpg')}}" style="width:100%;height:100%;">
 				</div>
 			</section>
 			
@@ -120,17 +120,17 @@
 			    	<div class="ui-grid-b" style="margin-top:0.2em;">
 						<div class="ui-block-a" style="text-align:center;">
 							<a href="#provider_show" data-ajax="false" data-transition="flip">
-								<img src="/images/btn1.png" style="width:100%;height:100%;">
+								<img src="{{asset('home/images/btn1.png')}}" style="width:100%;height:100%;">
 							</a>
 						</div>
 						<div class="ui-block-b" style="text-align:center;">
 							<a href="/supplier/applyWelfare.php" data-ajax="false" data-transition="flip">
-								<img src="/images/btn3.png" style="width:100%;height:100%;">
+								<img src="{{asset('home/images/btn3.png')}}" style="width:100%;height:100%;">
 							</a>
 						</div>
 						<div class="ui-block-c" style="text-align:center;">
 							<a href="/supplier/toSupplierApply.php"  data-ajax="false" data-transition="flip">
-								<img src="/images/btn21.png" style="width:100%;height:100%;">
+								<img src="{{asset('home/images/btn21.png')}}" style="width:100%;height:100%;">
 							</a>
 						</div>
 					</div>
@@ -164,7 +164,7 @@
 					<!-- 
 					<li>
 						<a href="/supplier/toSupplierDetail.php" data-ajax="false" data-transition="flip">
-							<img src="../images/_assets/img/album-bb.jpg" style="margin-top:1.5em;margin-left:0.5em;border-radius:50%;width:4em;height:4em;">
+							<img src="{{asset('home../images/_assets/img/album-bb.jpg')}}" style="margin-top:1.5em;margin-left:0.5em;border-radius:50%;width:4em;height:4em;">
 						<h4>盘古搬运服务有限公司</h4>
 						<p>
 							<span style="font-weight:bold;">所在地:江苏-苏州-昆山</span>
@@ -211,10 +211,10 @@
 					</ul>
 				</div>
 				<div id="one" class="ui-body-d ui-content">
-				<img src="/images/sm1.jpg" style="width:100%;height:100%;"/>
+				<img src="{{asset('home/images/sm1.jpg')}}" style="width:100%;height:100%;"/>
 			</div>
 			<div id="two">
-				<img src="/images/sm2.jpg" style="width:100%;height:100%;"/>
+				<img src="{{asset('home/images/sm2.jpg')}}" style="width:100%;height:100%;"/>
 			</div>
 		
 			</div>
