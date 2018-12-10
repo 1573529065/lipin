@@ -9,9 +9,9 @@
 		<link rel="stylesheet" href="/css/jquery.mobile-1.4.5.css">
 
 		<link rel="shortcut icon" href="/favicon.ico">
-		<script src="/js/jquery.js"></script>
-		<script src="/js/common.js"></script>
-		<script src="/js/jquery.mobile-1.4.5.js"></script>
+		<script src="{{asset('home/js/jquery.js')}}"></script>
+		<script src="{{asset('home/js/common.js')}}"></script>
+		<script src="{{asset('home/js/jquery.mobile-1.4.5.js')}}"></script>
 		<style>
 			li{
 				list-style:none;

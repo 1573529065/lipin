@@ -9,16 +9,16 @@
 	<link rel="stylesheet"
 	href="/css/jquery.mobile-1.4.5.css" />
 <script type="text/javascript"
-	src="/js/jquery.js"></script>
+	src="{{asset('home/js/jquery.js')}}"></script>
 	<script type="text/javascript"
-	src="/js/jquery.form.js"></script>
+	src="{{asset('home/js/jquery.form.js')}}"></script>
 <script
-	src="/js/jquery.mobile-1.4.5.js"></script>
+	src="{{asset('home/js/jquery.mobile-1.4.5.js')}}"></script>
 	
 <script
-	src="/js/jquery.validate.min.js"></script>
+	src="{{asset('home/js/jquery.validate.min.js')}}"></script>
 	<script
-	src="/js/common.js"></script>
+	src="{{asset('home/js/common.js')}}"></script>
 	<script type="text/javascript">
 	
 	var _hmt = _hmt || [];
@@ -93,7 +93,7 @@
 	  			<span style="font-weight:bold;">余生</span>
 	  		</td>
 	  		<td>
-	  			<span style="font-weight:bold;">金币</span><!--<span><img src="/images/gold.png" alt="没有图片" style="padding:5px;height:32px;"></span>--><span style="color:red;font-weight:bold;min-height:32px;">0</span><span style="font-weight:bold;">枚</span>
+	  			<span style="font-weight:bold;">金币</span><!--<span><img src="{{asset('home/images/gold.png')}}" alt="没有图片" style="padding:5px;height:32px;"></span>--><span style="color:red;font-weight:bold;min-height:32px;">0</span><span style="font-weight:bold;">枚</span>
 	  	
 	  		</td>
 	  		<td>

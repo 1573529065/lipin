@@ -13,15 +13,15 @@
 
 		
 		<script type="text/javascript"
-		src="/js/jquery.js"></script>
+		src="{{asset('home/js/jquery.js')}}"></script>
 	<script type="text/javascript"
-		src="/js/jquery.form.js"></script>
+		src="{{asset('home/js/jquery.form.js')}}"></script>
 	<script type="text/javascript"
-		src="/js/jquery.validate.min.js"></script>
+		src="{{asset('home/js/jquery.validate.min.js')}}"></script>
 	<script
-		src="/js/jquery.mobile-1.4.5.js"></script>
-	<script src="/js/common.js"></script>
-	<script src="/js/jquery.cookie.js"></script>
+		src="{{asset('home/js/jquery.mobile-1.4.5.js')}}"></script>
+	<script src="{{asset('home/js/common.js')}}"></script>
+	<script src="{{asset('home/js/jquery.cookie.js')}}"></script>
 		<style type="text/css">
 			select{
 				font-size:0.75em;

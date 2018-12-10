@@ -11,10 +11,10 @@
 		<link rel="stylesheet"
 			href="/css/jquery.mobile-1.4.5.css" />
      <script type="text/javascript"
-	       src="/js/jquery.js"></script>
+	       src="{{asset('home/js/jquery.js')}}"></script>
      <script
-	       src="/js/jquery.mobile-1.4.5.js"></script>
-	 <script type="text/javascript" src="/js/common.js"></script>
+	       src="{{asset('home/js/jquery.mobile-1.4.5.js')}}"></script>
+	 <script type="text/javascript" src="{{asset('home/js/common.js')}}"></script>
 	<style>
 			li{
 				list-style:none;
@@ -163,7 +163,7 @@
 		</div>
 		<div data-role="main" class="ui-content">
 			<div style="width:20%;float:left;height:5.1em;">
-					<img src="../images/_assets/img/album-bb.jpg" id="supplierLogo" style="border-radius:50%;height:5em;width:5em;margin-left:1em;">
+					<img src="{{asset('home../images/_assets/img/album-bb.jpg')}}" id="supplierLogo" style="border-radius:50%;height:5em;width:5em;margin-left:1em;">
 				</div>
 				<div style="float:right;width:79%;height:5.1em;margin-left:1em;text-align:center;margin-top:-5em;">
 					<h4 class="companyName"></h4>

@@ -10,9 +10,9 @@
 <link rel="stylesheet"
 	href="/css/jquery.mobile-1.4.5.css" />
 <script type="text/javascript"
-	src="/js/jquery.js"></script>
+	src="{{asset('home/js/jquery.js')}}"></script>
 <script
-	src="/js/jquery.mobile-1.4.5.js"></script>
+	src="{{asset('home/js/jquery.mobile-1.4.5.js')}}"></script>
 </head>
 <body>
 	<div data-role="page" id="listQuestionsPage">
