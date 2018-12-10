@@ -8,14 +8,14 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="/css/jquery.mobile-1.4.5.css" />
 	<script type="text/javascript"
-		src="/js/jquery.js"></script>
+		src="{{asset('home/js/jquery.js')}}"></script>
 	<script type="text/javascript"
-		src="/js/jquery.form.js"></script>
+		src="{{asset('home/js/jquery.form.js')}}"></script>
 	<script type="text/javascript"
-		src="/js/jquery.validate.min.js"></script>
+		src="{{asset('home/js/jquery.validate.min.js')}}"></script>
 	<script
-		src="/js/jquery.mobile-1.4.5.js"></script>
-	<script src="/js/common.js"></script>
+		src="{{asset('home/js/jquery.mobile-1.4.5.js')}}"></script>
+	<script src="{{asset('home/js/common.js')}}"></script>
 <style>
 	*,body{
 		margin:0;
@@ -141,7 +141,7 @@
 	    <div style="border:1px dashed #ccc;height:72px;width:100%;margin-right:5px;">
 		<!--
 		<a href="http://www.hdb.com/party/ixmm2.html"> -->
-	    	<img src="/images/ad1.jpg" id="ad_img" style="width:100%;height:100%;">
+	    	<img src="{{asset('home/images/ad1.jpg')}}" id="ad_img" style="width:100%;height:100%;">
 	    	<!--</a>-->
 	    </div>
 	    <section>
@@ -166,12 +166,12 @@
 			    <div class="ui-grid-a">
 			    	<div class="ui-block-a" style="text-align:center;">
 						<a href="#showInfoPage" data-ajax="false" data-rel="dialog" data-transition="flip">
-							<img src="/images/bill_sm_btn.png" style="width:50%;height:50%;">
+							<img src="{{asset('home/images/bill_sm_btn.png')}}" style="width:50%;height:50%;">
 						</a>
 					</div>
 					<div class="ui-block-b" style="text-align:center;">
 						<a href="" data-ajax="false" class="pub" data-rel="dialog" data-transition="flip">
-							<img src="/images/bill_fb_btn.png" style="width:50%;height:50%;">
+							<img src="{{asset('home/images/bill_fb_btn.png')}}" style="width:50%;height:50%;">
 						</a>
 					</div>
 					
