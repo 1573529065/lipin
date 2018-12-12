@@ -82,7 +82,7 @@
 					
 					var resultCode = res.resultCode;
 					if(resultCode=='1'){
-						window.location.href=path+"/supplier/toSupplierMgr.php";
+						window.location.href=path+"/supplier/toSupplierMgr.blade.php";
 						
 					}else{
 						showMyPopup("申请福利失败！",0);

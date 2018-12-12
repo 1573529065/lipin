@@ -6,7 +6,7 @@
 	<title>销售与采购联盟</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="/css/jquery.mobile-1.4.5.css" />
+	<link rel="stylesheet" href="{{asset('home/css/jquery.mobile-1.4.5.css')}}" />
 	<script type="text/javascript"
 		src="{{asset('home/js/jquery.js')}}"></script>
 	<script type="text/javascript"
@@ -197,7 +197,7 @@
 	    <div data-role="navbar">
 	       <ul>
 	       <li><a href="/bill/toMain.php" data-ajax="false" data-rel="dialog" class="ui-btn-active ui-state-persist"  data-transition="flip">采购列表</a></li>
-	        	<li><a href="/supplier/toSupplierMgr.php" data-ajax="false"  data-rel="dialog"  data-transition="flip">供应商库</a></li>
+	        	<li><a href="{{url('')}}/supplier/toSupplierMgr.php" data-ajax="false"  data-rel="dialog"  data-transition="flip">供应商库</a></li>
 	        <li><a href="/vcom/toVcoms.php" data-ajax="false" data-rel="dialog" data-transition="flip">拜访采购</a></li>
 			
  		  <!-- 	<li><a href="" data-ajax="false" class="pub" data-rel="dialog"  data-transition="flip">发布采购</a></li> -->

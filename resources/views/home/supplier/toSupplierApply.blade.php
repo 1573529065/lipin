@@ -185,7 +185,7 @@
 						
 						var resultCode = res.resultCode;
 						if(resultCode=='1'){
-							window.location.href=path+"/supplier/toSupplierMgr.php";
+							window.location.href=path+"/supplier/toSupplierMgr.blade.php";
 							
 						}else{
 							showMyPopup("供应商申请失败！",0);
