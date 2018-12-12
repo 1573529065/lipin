@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 
-class IndexController extends CommonController
+class Index extends CommonController
 {
     /**
      * 后台首页

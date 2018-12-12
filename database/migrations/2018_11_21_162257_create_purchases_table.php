@@ -22,7 +22,7 @@ class CreatePurchasesTable extends Migration
             $table->integer('price')->comment('解锁采购需要金币数');
             $table->timestamp('push_at')->comment('发布时间');
             $table->timestamp('expire_at')->comment('过期时间');
-            $table->test('detail')->comment('采购信息详情');
+            $table->text('detail')->comment('采购信息详情');
             $table->unsignedInteger('pay_num')->comment('付费查看次数');
 
             $table->index('ub_id');
