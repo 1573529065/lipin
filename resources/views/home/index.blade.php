@@ -197,7 +197,7 @@
 	    <div data-role="navbar">
 	       <ul>
 	       <li><a href="/bill/toMain.php" data-ajax="false" data-rel="dialog" class="ui-btn-active ui-state-persist"  data-transition="flip">采购列表</a></li>
-	        	<li><a href="{{url('')}}/supplier/toSupplierMgr.php" data-ajax="false"  data-rel="dialog"  data-transition="flip">供应商库</a></li>
+	        	<li><a href="{{url('/suppli')}}" data-ajax="false"  data-rel="dialog"  data-transition="flip">供应商库</a></li>
 	        <li><a href="/vcom/toVcoms.php" data-ajax="false" data-rel="dialog" data-transition="flip">拜访采购</a></li>
 			
  		  <!-- 	<li><a href="" data-ajax="false" class="pub" data-rel="dialog"  data-transition="flip">发布采购</a></li> -->

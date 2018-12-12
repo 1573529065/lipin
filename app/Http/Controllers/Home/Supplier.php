@@ -9,7 +9,7 @@
 namespace App\Http\Controllers\Home;
 
 
-use App\Http\Requests\Request;
+use Illuminate\Http\Request;
 
 class Supplier extends Front
 {
@@ -19,6 +19,7 @@ class Supplier extends Front
      */
     public function toSupplierMgr(Request $request)
     {
+
         view('home.supplier.toSupplierMgr');
     }
 
