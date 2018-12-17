@@ -17,8 +17,8 @@
 
 // 前台路由
 Route::group(['namespace' => 'Home'], function () {
-    Route::get('/index', 'Index@index'); // 首页
-    Route::get('/suppli', 'Supplier@toSupplierMgr'); //
+    Route::get('/index', 'Index@index');    // 首页
+    Route::get('/suppli', 'Supplier@toSupplierMgr'); // 供应商库
 });
 
 // 后台路由

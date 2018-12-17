@@ -222,7 +222,8 @@
 <script type="text/javascript" src="{{asset('admin/lib/jquery/1.9.1/jquery.min.js')}}"></script>
 <script type="text/javascript" src="{{asset('admin/lib/layer/2.4/layer.js')}}"></script>
 <script type="text/javascript" src="{{asset('admin/static/h-ui/js/H-ui.min.js')}}"></script>
-<script type="text/javascript" src="{{asset('admin/static/h-ui.admin/js/H-ui.admin.js')}}"></script> <!--/_footer 作为公共模版分离出去-->
+<script type="text/javascript" src="{{asset('admin/static/h-ui.admin/js/H-ui.admin.js')}}"></script>
+<!--/_footer 作为公共模版分离出去-->
 
 <!--请在下方写此页面业务相关的脚本-->
 <script type="text/javascript" src="{{asset('admin/lib/jquery.contextmenu/jquery.contextmenu.r2.js')}}"></script>
@@ -242,6 +243,7 @@
          }
          });*/
     });
+
     /*个人信息*/
     function myselfinfo() {
         layer.open({
@@ -264,6 +266,7 @@
         });
         layer.full(index);
     }
+
     /*图片-添加*/
     function picture_add(title, url) {
         var index = layer.open({
@@ -273,6 +276,7 @@
         });
         layer.full(index);
     }
+
     /*产品-添加*/
     function product_add(title, url) {
         var index = layer.open({
@@ -282,6 +286,7 @@
         });
         layer.full(index);
     }
+
     /*用户-添加*/
     function member_add(title, url, w, h) {
         layer_show(title, url, w, h);

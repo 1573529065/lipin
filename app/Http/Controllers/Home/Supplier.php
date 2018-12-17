@@ -19,8 +19,13 @@ class Supplier extends Front
      */
     public function toSupplierMgr(Request $request)
     {
+        return view('home.supplier.toSupplierMgr');
+    }
 
-        view('home.supplier.toSupplierMgr');
+    public function toSupplierDetail(Request $request)
+    {
+        return view('home.supplier.toSupplierDetail');
+
     }
 
 }
