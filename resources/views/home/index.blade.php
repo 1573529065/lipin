@@ -40,9 +40,23 @@
 <div data-role="page" id="listBillsPage">
     <script type="text/javascript">
         var path = "";
-        //	var li = "<li><p style='font-size:1em;font-weight:bold;'>{0}</p><p style='font-size:0.75em;'><span>需求城市:{1}</span><a href='{2}' data-ajax='false' data-transition='flip' style='float:right;font-size:1em;font-weight:bold;margin-right:1em;'>查看详情</a> </p><p style='font-size:0.75em;height:1.5em;'>发布时间:{3}</p>";
-        //	var li = "<li><p style='font-size:1em;font-weight:bold;'>{0}</p><p style='font-size:1em;margin-top:0.2em;'><span>需求城市:{1}</span><a href='{2}' data-ajax='false' data-transition='flip' style='float:right;font-size:0.75em;font-weight:bold;margin:0.1em;border:1px solid blue;height:1.5em;'>查看详情</a> </p>";
-        var li = "<li><p style='font-size:1em;font-weight:bold;'>{0}</p><p style='font-size:1em;margin-top:0.2em;'><span>需求城市:{1}</span><a href='{2}' data-ajax='false' data-transition='flip' style='float:right;font-size:0.75em;font-weight:bold;margin:0.1em;width:60px;height:20px;)'></a> </p>";
+        //	var li = "<li>
+        // <p style='font-size:1em;font-weight:bold;'>{0}</p>
+        // <p style='font-size:0.75em;'><span>需求城市:{1}</span>
+        // <a href='{2}' data-ajax='false' data-transition='flip' style='float:right;font-size:1em;font-weight:bold;margin-right:1em;'>查看详情</a>
+        // </p><p style='font-size:0.75em;height:1.5em;'>发布时间:{3}</p>";
+
+        //	var li = "<li>
+        // <p style='font-size:1em;font-weight:bold;'>{0}</p>
+        // <p style='font-size:1em;margin-top:0.2em;'><span>需求城市:{1}</span>
+        // <a href='{2}' data-ajax='false' data-transition='flip' style='float:right;font-size:0.75em;font-weight:bold;margin:0.1em;border:1px solid blue;height:1.5em;'>查看详情</a>
+        // </p>";
+
+        var li = "<li>" +
+            "<p style='font-size:1em;font-weight:bold;'>{0}</p>" +
+            "<p style='font-size:1em;margin-top:0.2em;'><span>需求城市:{1}</span>" +
+            "<a href='{2}' data-ajax='false' data-transition='flip' style='float:right;font-size:0.75em;font-weight:bold;margin:0.1em;width:60px;height:20px;)'></a>" +
+            "</p>";
 
         function fillList(data) {
             var $list = $("#billList");
@@ -112,7 +126,8 @@
                         if (resultCode == '1') {
                             goTo(purl);
                         } else if (resultCode == '-1') {
-                            showMyPopup("<font color='red'>对不起,你尚未实名制!</font><br/><font><a href='/ucenter/toCenter.php'>请到个人中心进行实名！</a></font>", 0);
+                            showMyPopup("<font color='red'>对不起,你尚未实名制!</font><br/><font>" +
+                                "<a href='/ucenter/toCenter.php'>请到个人中心进行实名！</a></font>", 0);
 
                         } else {
                             showMyPopup("服务器异常,稍后再试!", 0);
@@ -184,7 +199,8 @@
         </section>
         <div style="padding-left:1em;margin-top:0.5em;text-align:center;">
             <font style="color:blue;margin-left:0em;">正在采购 ：16条</font><font style="margin-left:1em;">共计采购: 1134条</font>
-            <!-- <a style="float:right;    float: right;margin-right: 0em;margin-top: -0.65em;height: 14px;background-color: #33b7cc;color:red;" href="#showInfoPage" data-role="button" data-mini="true" data-transition="flip">信息说明</a> -->
+            <!-- <a style="float:right;    float: right;margin-right: 0em;margin-top: -0.65em;height: 14px;background-color: #33b7cc;color:red;"
+             href="#showInfoPage" data-role="button" data-mini="true" data-transition="flip">信息说明</a> -->
         </div>
         <ul data-role="listview" id="billList" data-filter="true" data-inset="true" data-filter-placeholder="查询">
 
@@ -195,13 +211,19 @@
     <div data-role="footer" data-position="fixed" data-tap-toggle="false">
         <div data-role="navbar">
             <ul>
-                <li><a href="/bill/toMain.php" data-ajax="false" data-rel="dialog"
-                       class="ui-btn-active ui-state-persist" data-transition="flip">采购列表</a></li>
-                <li><a href="{{url('/suppli')}}" data-ajax="false" data-rel="dialog" data-transition="flip">供应商库</a>
+                <li>
+                    <a href="/bill/toMain.php" data-ajax="false" data-rel="dialog"
+                       class="ui-btn-active ui-state-persist" data-transition="flip">采购列表1</a>
                 </li>
-                <li><a href="/vcom/toVcoms.php" data-ajax="false" data-rel="dialog" data-transition="flip">拜访采购</a></li>
-
-                <!-- 	<li><a href="" data-ajax="false" class="pub" data-rel="dialog"  data-transition="flip">发布采购</a></li> -->
+                <li>
+                    <a href="{{url('/suppli')}}" data-ajax="false" data-rel="dialog" data-transition="flip">供应商库</a>
+                </li>
+                <li>
+                    <a href="/vcom/toVcoms.php" data-ajax="false" data-rel="dialog" data-transition="flip">拜访采购</a>
+                </li>
+                <li>
+                    <a href="" data-ajax="false" class="pub" data-rel="dialog"  data-transition="flip">发布采购</a>
+                </li>
 
                 <li><a href="/ucenter/toCenter.php" data-ajax="false" data-rel="dialog" data-transition="flip">个人中心</a>
                 </li>
