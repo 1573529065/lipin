@@ -18,7 +18,15 @@
 // 前台路由
 Route::group(['namespace' => 'Home'], function () {
     Route::get('/index', 'Index@index');    // 首页
+
+
     Route::get('/suppli', 'Supplier@toSupplierMgr'); // 供应商库
+
+
+    Route::get('/vcom/toVcoms', 'Vcom@toVcoms'); // 拜访采购首页
+
+
+    Route::get('/ucenter/toCenter', 'Ucenter@toCenter'); // 发布采购首页
 });
 
 // 后台路由

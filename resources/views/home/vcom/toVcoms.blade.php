@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="/css/jquery.mobile-1.4.5.css"/>
+    <link rel="stylesheet" href="{{asset('home//css/jquery.mobile-1.4.5.css')}}"/>
     <script type="text/javascript"
             src="{{asset('home/js/jquery.js')}}"></script>
     <script type="text/javascript"
@@ -181,14 +181,14 @@
     <div data-role="footer" data-position="fixed" data-tap-toggle="false">
         <div data-role="navbar">
             <ul>
-                <li><a href="/bill/toMain.php" data-ajax="false" data-rel="dialog">采购列表</a></li>
-                <li><a href="/supplier/toSupplierMgr.php" data-ajax="false" data-rel="dialog" data-transition="flip">供应商库</a>
+                <li><a href="{{url('/index')}}" data-ajax="false" data-rel="dialog">采购列表</a></li>
+                <li><a href="{{url('/suppli')}}" data-ajax="false" data-rel="dialog" data-transition="flip">供应商库</a>
                 </li>
-                <li><a href="/vcom/toVcoms.php" data-ajax="false" data-rel="dialog"
+                <li><a href="{{url('/vcom/toVcoms')}}" data-ajax="false" data-rel="dialog"
                        class="ui-btn-active ui-state-persist" data-transition="flip">拜访采购</a></li>
 
 
-                <li><a href="/ucenter/toCenter.php" data-ajax="false" data-rel="dialog" data-transition="flip">个人中心</a>
+                <li><a href="{{url('/ucenter/toCenter')}}" data-ajax="false" data-rel="dialog" data-transition="flip">个人中心</a>
                 </li>
             </ul>
         </div>

@@ -212,20 +212,20 @@
         <div data-role="navbar">
             <ul>
                 <li>
-                    <a href="/bill/toMain.php" data-ajax="false" data-rel="dialog"
+                    <a href="{{url('/index')}}" data-ajax="false" data-rel="dialog"
                        class="ui-btn-active ui-state-persist" data-transition="flip">采购列表1</a>
                 </li>
                 <li>
                     <a href="{{url('/suppli')}}" data-ajax="false" data-rel="dialog" data-transition="flip">供应商库</a>
                 </li>
                 <li>
-                    <a href="/vcom/toVcoms.php" data-ajax="false" data-rel="dialog" data-transition="flip">拜访采购</a>
+                    <a href="{{url('/vcom/toVcoms')}}" data-ajax="false" data-rel="dialog" data-transition="flip">拜访采购</a>
                 </li>
-                <li>
-                    <a href="" data-ajax="false" class="pub" data-rel="dialog"  data-transition="flip">发布采购</a>
-                </li>
+                {{--<li>--}}
+                    {{--<a href="" data-ajax="false" class="pub" data-rel="dialog"  data-transition="flip">发布采购</a>--}}
+                {{--</li>--}}
 
-                <li><a href="/ucenter/toCenter.php" data-ajax="false" data-rel="dialog" data-transition="flip">个人中心</a>
+                <li><a href="{{url('/ucenter/toCenter')}}" data-ajax="false" data-rel="dialog" data-transition="flip">个人中心</a>
                 </li>
             </ul>
         </div>
