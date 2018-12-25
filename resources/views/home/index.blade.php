@@ -230,7 +230,7 @@
             </ul>
         </div>
         <div style="align:center;line-height:2em;font-size:0.5em;margin-left:8em;">
-            <a href="http://www.miibeian.gov.cn">苏ICP备17016930号-2</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;版权：苏州人脉汇网络科技有限公司
+            <a href="http://www.miibeian.gov.cn">苏ICP备17016930号-2</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;版权：销售与采购联盟
         </div>
     </div>
 </div>
