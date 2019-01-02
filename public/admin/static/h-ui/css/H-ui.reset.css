@@ -35,7 +35,7 @@ a:focus{outline:none}
 a:hover,a:active{outline:none}:focus{outline:none}
 sub,sup{vertical-align:baseline}
 button,input[type="button"], input[type="submit"] {line-height:normal !important;}
-/*img*/
+/*images*/
 img{border:0;vertical-align:middle}
 a img,img{-ms-interpolation-mode:bicubic}
 .img-responsive{max-width: 100%;height: auto}

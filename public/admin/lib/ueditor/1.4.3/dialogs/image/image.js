@@ -260,7 +260,7 @@
             height = (!ow || !oh) ? '':width*oh/ow;
 
             if(url) {
-                preview.innerHTML = '<img src="' + url + '" width="' + width + '" height="' + height + '" border="' + border + 'px solid #000" title="' + title + '" />';
+                preview.innerHTML = '<images src="' + url + '" width="' + width + '" height="' + height + '" border="' + border + 'px solid #000" title="' + title + '" />';
             }
         },
         getInsertList: function () {
@@ -445,7 +445,7 @@
                             if (error || !src) {
                                 $wrap.text(lang.uploadNoPreview);
                             } else {
-                                var $img = $('<img src="' + src + '">');
+                                var $img = $('<images src="' + src + '">');
                                 $wrap.empty().append($img);
                                 $img.on('error', function () {
                                     $wrap.text(lang.uploadNoPreview);

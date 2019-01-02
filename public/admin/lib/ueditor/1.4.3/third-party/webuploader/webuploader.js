@@ -2079,7 +2079,7 @@
              *         if ( error ) {
              *             $li.text('预览错误');
              *         } else {
-             *             $li.append('<img alt="" src="' + ret + '" />');
+             *             $li.append('<images alt="" src="' + ret + '" />');
              *         }
              *     });
              *

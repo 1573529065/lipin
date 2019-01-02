@@ -128,7 +128,7 @@
 
             // 压根就没有安转。
             } else {
-                $wrap.html('<a href="http://www.adobe.com/go/getflashplayer" target="_blank" border="0"><img alt="get flash player" src="http://www.adobe.com/macromedia/style_guide/images/160x41_Get_Flash_Player.jpg" /></a>');
+                $wrap.html('<a href="http://www.adobe.com/go/getflashplayer" target="_blank" border="0"><images alt="get flash player" src="http://www.adobe.com/macromedia/style_guide/images/160x41_Get_Flash_Player.jpg" /></a>');
             }
 
             return;
@@ -258,7 +258,7 @@
                     }
 
                     if( isSupportBase64 ) {
-                        img = $('<img src="'+src+'">');
+                        img = $('<images src="'+src+'">');
                         $wrap.empty().append( img );
                     } else {
                         $.ajax('../server/preview.php', {
@@ -267,7 +267,7 @@
                             dataType:'json'
                         }).done(function( response ) {
                             if (response.result) {
-                                img = $('<img src="'+response.result+'">');
+                                img = $('<images src="'+response.result+'">');
                                 $wrap.empty().append( img );
                             } else {
                                 $wrap.text("预览出错");

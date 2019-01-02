@@ -132,7 +132,7 @@ require([ 'webuploader.flashonly' ], function( WebUploader ) {
                         return;
                     }
 
-                    var img = $('<img src="'+src+'">');
+                    var img = $('<images src="'+src+'">');
                     $wrap.empty().append( img );
                 }, thumbnailWidth, thumbnailHeight );
 

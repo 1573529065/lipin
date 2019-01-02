@@ -94,7 +94,7 @@
                     <span style="font-weight:bold;">余生</span>
                 </td>
                 <td>
-                    <span style="font-weight:bold;">金币</span><!--<span><img src="{{asset('home/images/gold.png')}}" alt="没有图片" style="padding:5px;height:32px;"></span>-->
+                    <span style="font-weight:bold;">金币</span><!--<span><images src="{{asset('home/images/gold.png')}}" alt="没有图片" style="padding:5px;height:32px;"></span>-->
                     <span style="color:red;font-weight:bold;min-height:32px;">0</span><span
                             style="font-weight:bold;">枚</span>
 
@@ -176,14 +176,18 @@
         <div data-role="navbar">
             <ul>
                 <li><a href="{{url('/index')}}" data-ajax="false" data-rel="dialog" data-transition="flip">采购列表</a></li>
-                <li><a href="{{url('/suppli')}}" data-ajax="false" data-rel="dialog" data-transition="flip">供应商库</a>
-                </li>
-                <li><a href="{{url('/vcom/toVcoms')}}" data-ajax="false" data-rel="dialog" data-transition="flip">拜访采购</a></li>
+                {{--<li><a href="{{url('/suppli')}}" data-ajax="false" data-rel="dialog" data-transition="flip">供应商库</a>--}}
+                {{--</li>--}}
+                {{--<li><a href="{{url('/vcom/toVcoms')}}" data-ajax="false" data-rel="dialog" data-transition="flip">拜访采购</a></li>--}}
 
 
                 <li><a href="{{url('/ucenter/toCenter')}}" data-ajax="false" data-rel="dialog"
                        class="ui-btn-active ui-state-persist" data-transition="flip">个人中心</a></li>
             </ul>
+        </div>
+        <div style="align:center;line-height:2em;font-size:0.5em;margin-left:8em;">
+            {{--<a href="http://www.miibeian.gov.cn">苏ICP备17016930号-2</a>--}}
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;版权：销售与采购联盟
         </div>
     </div>
 </div>

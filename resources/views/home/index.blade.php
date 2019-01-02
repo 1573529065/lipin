@@ -146,7 +146,7 @@
             setInterval(function () {
                 //	changeImg();
                 cnt++;
-                $("#ad_img").attr("src", path + "/images/ad" + (cnt % 2) + ".jpg?t=" + new Date().getTime());
+                $("#ad_img").attr("src", path + "/home/images/ad" + (cnt % 2) + ".jpg?t=" + new Date().getTime());
             }, 5000);
 
 
@@ -163,30 +163,30 @@
         <section>
 
 
-            <!-- <div class="ui-grid-a">
+            {{--<div class="ui-grid-a">--}}
 
-                <div class="ui-block-b" style="text-align:center;padding-left:2em;">
-                    <a href="#showInfoPage"  class="ui-btn ui-btn-inline" data-ajax="false" data-transition="flip">
-                        信息説明
-                    </a>
-                </div>
-                <div class="ui-block-a" style="text-align:center;padding-left:2em;">
-                    <a href="" data-ajax="false" class="pub ui-btn ui-btn-inline" data-rel="dialog"  data-transition="flip">发布采购</a>
+                {{--<div class="ui-block-b" style="text-align:center;padding-left:2em;">--}}
+                    {{--<a href="#showInfoPage"  class="ui-btn ui-btn-inline" data-ajax="false" data-transition="flip">--}}
+                        {{--信息説明--}}
+                    {{--</a>--}}
+                {{--</div>--}}
+                {{--<div class="ui-block-a" style="text-align:center;padding-left:2em;">--}}
+                    {{--<a href="" data-ajax="false" class="pub ui-btn ui-btn-inline" data-rel="dialog"  data-transition="flip">发布采购</a>--}}
 
-                </div>
+                {{--</div>--}}
 
-            </div> -->
+            {{--</div>--}}
 
 
             <div class="ui-grid-a">
                 <div class="ui-block-a" style="text-align:center;">
                     <a href="#showInfoPage" data-ajax="false" data-rel="dialog" data-transition="flip">
-                        <img src="{{asset('home/images/bill_sm_btn.png')}}" style="width:50%;height:50%;">
+                        <img src="{{asset('home/images/sm_btn.png')}}" style="width:50%;height:50%;">
                     </a>
                 </div>
                 <div class="ui-block-b" style="text-align:center;">
                     <a href="" data-ajax="false" class="pub" data-rel="dialog" data-transition="flip">
-                        <img src="{{asset('home/images/bill_fb_btn.png')}}" style="width:50%;height:50%;">
+                        <img src="{{asset('home/images/fb_btn.png')}}" style="width:50%;height:50%;">
                     </a>
                 </div>
 
@@ -199,8 +199,6 @@
         </section>
         <div style="padding-left:1em;margin-top:0.5em;text-align:center;">
             <font style="color:blue;margin-left:0em;">正在采购 ：16条</font><font style="margin-left:1em;">共计采购: 1134条</font>
-            <!-- <a style="float:right;    float: right;margin-right: 0em;margin-top: -0.65em;height: 14px;background-color: #33b7cc;color:red;"
-             href="#showInfoPage" data-role="button" data-mini="true" data-transition="flip">信息说明</a> -->
         </div>
         <ul data-role="listview" id="billList" data-filter="true" data-inset="true" data-filter-placeholder="查询">
 
@@ -213,14 +211,14 @@
             <ul>
                 <li>
                     <a href="{{url('/index')}}" data-ajax="false" data-rel="dialog"
-                       class="ui-btn-active ui-state-persist" data-transition="flip">采购列表1</a>
+                       class="ui-btn-active ui-state-persist" data-transition="flip">采购列表</a>
                 </li>
-                <li>
-                    <a href="{{url('/suppli')}}" data-ajax="false" data-rel="dialog" data-transition="flip">供应商库</a>
-                </li>
-                <li>
-                    <a href="{{url('/vcom/toVcoms')}}" data-ajax="false" data-rel="dialog" data-transition="flip">拜访采购</a>
-                </li>
+                {{--<li>--}}
+                    {{--<a href="{{url('/suppli')}}" data-ajax="false" data-rel="dialog" data-transition="flip">供应商库</a>--}}
+                {{--</li>--}}
+                {{--<li>--}}
+                    {{--<a href="{{url('/vcom/toVcoms')}}" data-ajax="false" data-rel="dialog" data-transition="flip">拜访采购</a>--}}
+                {{--</li>--}}
                 {{--<li>--}}
                     {{--<a href="" data-ajax="false" class="pub" data-rel="dialog"  data-transition="flip">发布采购</a>--}}
                 {{--</li>--}}
@@ -230,7 +228,8 @@
             </ul>
         </div>
         <div style="align:center;line-height:2em;font-size:0.5em;margin-left:8em;">
-            <a href="http://www.miibeian.gov.cn">苏ICP备17016930号-2</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;版权：销售与采购联盟
+            {{--<a href="http://www.miibeian.gov.cn">苏ICP备17016930号-2</a>--}}
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;版权：销售与采购联盟
         </div>
     </div>
 </div>

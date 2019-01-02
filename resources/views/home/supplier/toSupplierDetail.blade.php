@@ -37,10 +37,10 @@
         var path = "";
         var myImgPath = "http://zhizhum.com/supplierMgr/";
 
-        var product0 = "<div class='ui-block-a' style='width:49%;'><li><a href='/product/toProductDetail.php?id={0}' data-ajax='false' data-transition='flip'><img src='http://zhizhum.com/supplierMgr/images/products/{1}/{2}s.jpg' style='height:8em;width:8em;'><p>{3}</p></a></li></div>";
-        var product1 = "<div class='ui-block-b' style='width:49%;'><li><a href='/product/toProductDetail.php?id={0}' data-ajax='false' data-transition='flip'><img src='http://zhizhum.com/supplierMgr/images/products/{1}/{2}s.jpg' style='height:8em;width:8em;'><p>{3}</p></a></li></div>";
-        var zizhi0 = "<div class='ui-block-a' style='width:49%;'><li><a href='/zizhi/toZizhiDetail.php?id={0}' data-ajax='false' data-transition='flip'><img src='http://zhizhum.com/supplierMgr/images/zizhis/{1}.jpg' style='height:8em;width:8em;'><p>{2}</p></a></li></div>";
-        var zizhi1 = "<div class='ui-block-b' style='width:49%;'><li><a href='/zizhi/toZizhiDetail.php?id={0}' data-ajax='false' data-transition='flip'><img src='http://zhizhum.com/supplierMgr/images/zizhis/{1}.jpg' style='height:8em;width:8em;'><p>{2}</p></a></li></div>";
+        var product0 = "<div class='ui-block-a' style='width:49%;'><li><a href='/product/toProductDetail.php?id={0}' data-ajax='false' data-transition='flip'><images src='http://zhizhum.com/supplierMgr/images/products/{1}/{2}s.jpg' style='height:8em;width:8em;'><p>{3}</p></a></li></div>";
+        var product1 = "<div class='ui-block-b' style='width:49%;'><li><a href='/product/toProductDetail.php?id={0}' data-ajax='false' data-transition='flip'><images src='http://zhizhum.com/supplierMgr/images/products/{1}/{2}s.jpg' style='height:8em;width:8em;'><p>{3}</p></a></li></div>";
+        var zizhi0 = "<div class='ui-block-a' style='width:49%;'><li><a href='/zizhi/toZizhiDetail.php?id={0}' data-ajax='false' data-transition='flip'><images src='http://zhizhum.com/supplierMgr/images/zizhis/{1}.jpg' style='height:8em;width:8em;'><p>{2}</p></a></li></div>";
+        var zizhi1 = "<div class='ui-block-b' style='width:49%;'><li><a href='/zizhi/toZizhiDetail.php?id={0}' data-ajax='false' data-transition='flip'><images src='http://zhizhum.com/supplierMgr/images/zizhis/{1}.jpg' style='height:8em;width:8em;'><p>{2}</p></a></li></div>";
 
         function getSearchJson(str) {
             var searchJson = {};
@@ -165,7 +165,7 @@
     </div>
     <div data-role="main" class="ui-content">
         <div style="width:20%;float:left;height:5.1em;">
-            <img src="{{asset('home../images/_assets/img/album-bb.jpg')}}" id="supplierLogo"
+            <img src="{{asset('images')}}" id="supplierLogo"
                  style="border-radius:50%;height:5em;width:5em;margin-left:1em;">
         </div>
         <div style="float:right;width:79%;height:5.1em;margin-left:1em;text-align:center;margin-top:-5em;">

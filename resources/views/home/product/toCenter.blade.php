@@ -94,7 +94,7 @@
                     <span style="font-weight:bold;">余生</span>
                 </td>
                 <td>
-                    <span style="font-weight:bold;">金币</span><!--<span><img src="{{asset('home/images/gold.png')}}" alt="没有图片" style="padding:5px;height:32px;"></span>-->
+                    <span style="font-weight:bold;">金币</span><!--<span><images src="{{asset('home/images/gold.png')}}" alt="没有图片" style="padding:5px;height:32px;"></span>-->
                     <span style="color:red;font-weight:bold;min-height:32px;">0</span><span
                             style="font-weight:bold;">枚</span>
 

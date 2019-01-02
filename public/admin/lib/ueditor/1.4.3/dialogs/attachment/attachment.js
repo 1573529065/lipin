@@ -229,7 +229,7 @@
                                 if (error || !src) {
                                     $wrap.text(lang.uploadNoPreview);
                                 } else {
-                                    var $img = $('<img src="' + src + '">');
+                                    var $img = $('<images src="' + src + '">');
                                     $wrap.empty().append($img);
                                     $img.on('error', function () {
                                         $wrap.text(lang.uploadNoPreview);

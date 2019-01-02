@@ -458,7 +458,7 @@
                                 if (error || !src || (/^data:/.test(src) && browser.ie && browser.version <= 7)) {
                                     $wrap.text(lang.uploadNoPreview);
                                 } else {
-                                    var $img = $('<img src="' + src + '">');
+                                    var $img = $('<images src="' + src + '">');
                                     $wrap.empty().append($img);
                                     $img.on('error', function () {
                                         $wrap.text(lang.uploadNoPreview);

@@ -35,7 +35,7 @@
 <div data-role="page" id="suppliersPage">
     <script type="text/javascript">
         var path = "";
-        var supplierLi = "<li><a href='/supplier/toSupplierDetail.php?id={5}' data-ajax='false' data-transition='flip'><img src='http://zhizhum.com/supplierMgr/images/suppliers/logos/{0}.jpg' style='margin-top:1.5em;margin-left:0.5em;border-radius:50%;width:4em;height:4em;'><h4>{1}</h4><p><span style='font-weight:bold;'>所在地:{2}</span></p><p>主营产品: {3}</p><p><span style='font-weight:bold;color:red;'>按合同金额的{4}发放福利金</span></p></a></li>";
+        var supplierLi = "<li><a href='/supplier/toSupplierDetail.php?id={5}' data-ajax='false' data-transition='flip'><images src='http://zhizhum.com/supplierMgr/images/suppliers/logos/{0}.jpg' style='margin-top:1.5em;margin-left:0.5em;border-radius:50%;width:4em;height:4em;'><h4>{1}</h4><p><span style='font-weight:bold;'>所在地:{2}</span></p><p>主营产品: {3}</p><p><span style='font-weight:bold;color:red;'>按合同金额的{4}发放福利金</span></p></a></li>";
 
         function getSuppliers() {
             var $list = $("#supplierList");
@@ -167,7 +167,7 @@
         <!--
 					<li>
 						<a href="/supplier/toSupplierDetail.php" data-ajax="false" data-transition="flip">
-							<img src="{{asset('home../images/_assets/img/album-bb.jpg')}}" style="margin-top:1.5em;margin-left:0.5em;border-radius:50%;width:4em;height:4em;">
+							<images src="{{asset('images')}}" style="margin-top:1.5em;margin-left:0.5em;border-radius:50%;width:4em;height:4em;">
 						<h4>盘古搬运服务有限公司</h4>
 						<p>
 							<span style="font-weight:bold;">所在地:江苏-苏州-昆山</span>

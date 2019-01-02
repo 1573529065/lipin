@@ -173,7 +173,7 @@ css 命名规范
   2. css命名中英文对照
   current 当前    hover 悬停    selected 挑选   disabled 禁用   focus 得到焦点    blur 失去焦点   checked 勾选    success 成功    error 出错
 
-  header(hd) 头部   content(cnt) 内容   title(tit) 标题   item 项目（条）    cell 单元   image/pic(img) 图片   text(txt) 文字    top 顶部    scrubber 时序菜单
+  header(hd) 头部   content(cnt) 内容   title(tit) 标题   item 项目（条）    cell 单元   image/pic(images) 图片   text(txt) 文字    top 顶部    scrubber 时序菜单
 
   nav 导航    mainNav 主导航   subNav 子导航    topNav 顶部导航   breadcrumb 面包屑导航
 
@@ -279,7 +279,7 @@ a:focus{outline:none}
 a:hover,a:active{outline:none}:focus{outline:none}
 sub,sup{vertical-align:baseline}
 button,input[type="button"], input[type="submit"] {line-height:normal !important}
-/*img*/
+/*images*/
 img{border:0;vertical-align:middle}
 a img,img{-ms-interpolation-mode:bicubic}
 
@@ -2039,8 +2039,8 @@ a.btn:hover,a.btn:focus,a.btn:active,a.btn.active,a.btn.disabled,a.btn[disabled]
 
 /*3.6 图片*/
 /*3.6.1 图片效果
-<img src="" class="img-responsive|radius|round|thumbnail" />
-img-responsive 响应式    .radius 圆角图片    .round 圆形图片   .thumbnail 缩略图
+<images src="" class="images-responsive|radius|round|thumbnail" />
+images-responsive 响应式    .radius 圆角图片    .round 圆形图片   .thumbnail 缩略图
 */
 .img-responsive{display:inline-block;max-width:100%;height:auto}
 .thumbnail{display:inline-block;-webkit-box-sizing:border-box;box-sizing:border-box;max-width:100%;height:auto;padding:4px;line-height:1.42857143;background-color:#fff;border:1px solid #ddd;-webkit-transition:all .2s ease-in-out;-o-transition:all .2s ease-in-out;transition:all .2s ease-in-out}
@@ -2053,8 +2053,8 @@ img-responsive 响应式    .radius 圆角图片    .round 圆形图片   .thumb
 	Name:			modal_album
 	Example:
 <div class="album-item" style="width:160px">
-	<div class="album-img">
-		<img src="" style="height: 160px;">
+	<div class="album-images">
+		<images src="" style="height: 160px;">
 	</div>
 	<div class="album-title">《仙剑奇侠传》赵灵儿<span class="c-999">(20张)</span></div>
 	<div class="album-bg">
@@ -2072,7 +2072,7 @@ img-responsive 响应式    .radius 圆角图片    .round 圆形图片   .thumb
 
 /*3.6.3 头像
 	Name:			mod_avatar
-	Example:		<i class="avatar avatar-L radius"><img src="static/h-ui/images/ucenter/avatar-default.jpg"></i>
+	Example:		<i class="avatar avatar-L radius"><images src="static/h-ui/images/ucenter/avatar-default.jpg"></i>
 */
 .avatar{display:inline-block;position:relative; overflow:hidden}
 .avatar img{ display:block}
@@ -3397,9 +3397,9 @@ H-ui采用Font Awesome 3.2.1的整套图标，因为是图标字体，所以可�
   <div class="slider">
     <div class="bd">
       <ul>
-        <li><a href="http://www.h-ui.net/" target="_blank"><img src="temp/banner1.jpg" ></a></li>
-        <li><a href="http://www.h-ui.net/zhaishang.shtml" target="_blank"><img src="temp/banner2.jpg" ></a></li>
-        <li><a href="http://h-ui.net/H-ui.admin.shtml" target="_blank"><img src="temp/banner4.jpg" ></a></li>
+        <li><a href="http://www.h-ui.net/" target="_blank"><images src="temp/banner1.jpg" ></a></li>
+        <li><a href="http://www.h-ui.net/zhaishang.shtml" target="_blank"><images src="temp/banner2.jpg" ></a></li>
+        <li><a href="http://h-ui.net/H-ui.admin.shtml" target="_blank"><images src="temp/banner4.jpg" ></a></li>
       </ul>
     </div>
     <ol class="hd cl dots">
@@ -4022,7 +4022,7 @@ a.label:hover, a.label:focus, a.badge:hover, a.badge:focus{color: #fff;text-deco
 	Sample:
 	<ul class="commentList">
 	  <li class="item clearfix">
-	    <a href="#"><i class="avatar avatar-L radius"><img alt="" src="static/h-ui/images/ucenter/avatar-default.jpg"></i></a>
+	    <a href="#"><i class="avatar avatar-L radius"><images alt="" src="static/h-ui/images/ucenter/avatar-default.jpg"></i></a>
 		<div class="comment-main">
 		  <header class="comment-header">
 		    <div class="comment-meta"><a class="comment-author" href="#">辉哥</a> 评论于 <time title="2014年8月31日 下午3:20" datetime="2014-08-31T03:54:20">2014-8-31 15:20</time></div>

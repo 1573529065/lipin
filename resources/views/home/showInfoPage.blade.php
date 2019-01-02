@@ -166,12 +166,12 @@
             <div class="ui-grid-a">
                 <div class="ui-block-a" style="text-align:center;">
                     <a href="#showInfoPage" data-ajax="false" data-rel="dialog" data-transition="flip">
-                        <img src="{{asset('home/images/bill_sm_btn.png')}}" style="width:50%;height:50%;">
+                        <img src="{{asset('sm_btn.png')}}" style="width:50%;height:50%;">
                     </a>
                 </div>
                 <div class="ui-block-b" style="text-align:center;">
                     <a href="" data-ajax="false" class="pub" data-rel="dialog" data-transition="flip">
-                        <img src="{{asset('home/images/bill_fb_btn.png')}}" style="width:50%;height:50%;">
+                        <img src="{{asset('fb_btn.png')}}" style="width:50%;height:50%;">
                     </a>
                 </div>
 

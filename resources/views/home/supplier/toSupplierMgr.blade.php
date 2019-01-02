@@ -37,7 +37,7 @@
         var path = "";
         var supplierLi = "<li>" +
             "<a href='/supplier/toSupplierDetail.php?id={5}' data-ajax='false' data-transition='flip'>" +
-            "<img src='http://zhizhum.com/supplierMgr/images/suppliers/logos/{0}.jpg' " +
+            "<images src='http://zhizhum.com/supplierMgr/images/suppliers/logos/{0}.jpg' " +
             "style='margin-top:1.5em;margin-left:0.5em;border-radius:50%;width:4em;height:4em;'>" +
             "<h4>{1}</h4>" +
             "<p><span style='font-weight:bold;'>所在地:{2}</span></p>" +

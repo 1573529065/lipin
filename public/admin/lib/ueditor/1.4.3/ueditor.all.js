@@ -4652,15 +4652,15 @@ var fillCharReg = new RegExp(domUtils.fillChar, 'g');
          * @example
          * ```html
          * <!-- 选区 -->
-         * <b>xxx<img>[xx]x</b>
+         * <b>xxx<images>[xx]x</b>
          *
          * <script>
          *
          *     //执行操作
-         *     range.setStart( document.getElementsByTagName("img")[0], 3 );
+         *     range.setStart( document.getElementsByTagName("images")[0], 3 );
          *
          *     //此时， 选区变成了
-         *     //<b>xxx[<img>xx]x</b>
+         *     //<b>xxx[<images>xx]x</b>
          *
          * </script>
          * ```
@@ -7642,7 +7642,7 @@ var fillCharReg = new RegExp(domUtils.fillChar, 'g');
          * 检查编辑区域中是否有内容
          * @method  hasContents
          * @remind 默认有文本内容，或者有以下节点都不认为是空
-         * table,ul,ol,dl,iframe,area,base,col,hr,img,embed,input,link,meta,param
+         * table,ul,ol,dl,iframe,area,base,col,hr,images,embed,input,link,meta,param
          * @return { Boolean } 检查有内容返回true，否则返回false
          * @example
          * ```javascript
@@ -7897,7 +7897,7 @@ var fillCharReg = new RegExp(domUtils.fillChar, 'g');
          * 计算编辑器当前纯文本内容的长度
          * @method  getContentLength
          * @param { Boolean } ingoneHtml 传入true时，只按照纯文本来计算
-         * @return { Number } 返回计算的长度，内容中有hr/img/iframe标签，长度加1
+         * @return { Number } 返回计算的长度，内容中有hr/images/iframe标签，长度加1
          * @example
          * ```javascript
          * //编辑器html内容<p><strong>132</strong></p>
@@ -8440,7 +8440,7 @@ var filterWord = UE.filterWord = function () {
                         var width = str.match(/width:([ \d.]*p[tx])/i)[1],
                             height = str.match(/height:([ \d.]*p[tx])/i)[1],
                             src =  str.match(/src=\s*"([^"]*)"/i)[1];
-                        return '<img width="'+ transUnit(width) +'" height="'+transUnit(height) +'" src="' + src + '" />';
+                        return '<images width="'+ transUnit(width) +'" height="'+transUnit(height) +'" src="' + src + '" />';
                     } catch(e){
                         return '';
                     }
@@ -8710,7 +8710,7 @@ var filterWord = UE.filterWord = function () {
             var attrs = node.attrs;
             for (var a in attrs) {
                 //这里就针对
-                //<p>'<img src='http://nsclick.baidu.com/u.gif?&asdf=\"sdf&asdfasdfs;asdf'></p>
+                //<p>'<images src='http://nsclick.baidu.com/u.gif?&asdf=\"sdf&asdfasdfs;asdf'></p>
                 //这里边的\"做转换，要不用innerHTML直接被截断了，属性src
                 //有可能做的不够
                 attrhtml.push(a + (attrs[a] !== undefined ? '="' + (notTransAttrs[a] ? utils.html(attrs[a]).replace(/["]/g, function (a) {
@@ -11105,9 +11105,9 @@ UE.commands['insertimage'] = {
             var first = opt.shift();
             var floatStyle = first['floatStyle'];
             delete first['floatStyle'];
-////                img.style.border = (first.border||0) +"px solid #000";
-////                img.style.margin = (first.margin||0) +"px";
-//                img.style.cssText += ';margin:' + (first.margin||0) +"px;" + 'border:' + (first.border||0) +"px solid #000";
+////                images.style.border = (first.border||0) +"px solid #000";
+////                images.style.margin = (first.margin||0) +"px";
+//                images.style.cssText += ';margin:' + (first.margin||0) +"px;" + 'border:' + (first.border||0) +"px solid #000";
             domUtils.setAttributes(img, first);
             me.execCommand('imagefloat', floatStyle);
             if (opt.length > 0) {
@@ -11119,7 +11119,7 @@ UE.commands['insertimage'] = {
             var html = [], str = '', ci;
             ci = opt[0];
             if (opt.length == 1) {
-                str = '<img src="' + ci.src + '" ' + (ci._src ? ' _src="' + ci._src + '" ' : '') +
+                str = '<images src="' + ci.src + '" ' + (ci._src ? ' _src="' + ci._src + '" ' : '') +
                     (ci.width ? 'width="' + ci.width + '" ' : '') +
                     (ci.height ? ' height="' + ci.height + '" ' : '') +
                     (ci['floatStyle'] == 'left' || ci['floatStyle'] == 'right' ? ' style="float:' + ci['floatStyle'] + ';"' : '') +
@@ -11135,7 +11135,7 @@ UE.commands['insertimage'] = {
 
             } else {
                 for (var i = 0; ci = opt[i++];) {
-                    str = '<p ' + (ci['floatStyle'] == 'center' ? 'style="text-align: center" ' : '') + '><img src="' + ci.src + '" ' +
+                    str = '<p ' + (ci['floatStyle'] == 'center' ? 'style="text-align: center" ' : '') + '><images src="' + ci.src + '" ' +
                         (ci.width ? 'width="' + ci.width + '" ' : '') + (ci._src ? ' _src="' + ci._src + '" ' : '') +
                         (ci.height ? ' height="' + ci.height + '" ' : '') +
                         ' style="' + (ci['floatStyle'] && ci['floatStyle'] != 'center' ? 'float:' + ci['floatStyle'] + ';' : '') +
@@ -17598,7 +17598,7 @@ UE.plugins['video'] = function (){
         var str;
         switch (type){
             case 'image':
-                str = '<img ' + (id ? 'id="' + id+'"' : '') + ' width="'+ width +'" height="' + height + '" _url="'+url+'" class="' + classname.replace(/\bvideo-js\b/, '') + '"'  +
+                str = '<images ' + (id ? 'id="' + id+'"' : '') + ' width="'+ width +'" height="' + height + '" _url="'+url+'" class="' + classname.replace(/\bvideo-js\b/, '') + '"'  +
                     ' src="' + me.options.UEDITOR_HOME_URL+'themes/default/images/spacer.gif" style="background:url('+me.options.UEDITOR_HOME_URL+'themes/default/images/videologo.gif) no-repeat center center; border:1px solid gray;'+(align ? 'float:' + align + ';': '')+'" />'
                 break;
             case 'embed':
@@ -23410,7 +23410,7 @@ UE.commands['insertparagraph'] = {
 //    var me = this;
 //    function createInsertStr( obj, toIframe, addParagraph ) {
 //        return !toIframe ?
-//                (addParagraph ? '<p>' : '') + '<img title="'+obj.title+'" width="' + obj.width + '" height="' + obj.height + '"' +
+//                (addParagraph ? '<p>' : '') + '<images title="'+obj.title+'" width="' + obj.width + '" height="' + obj.height + '"' +
 //                        ' src="' + me.options.UEDITOR_HOME_URL + 'themes/default/images/spacer.gif" style="background:url(' + obj.logo+') no-repeat center center; border:1px solid gray;" class="edui-faked-webapp" _url="' + obj.url + '" />' +
 //                        (addParagraph ? '</p>' : '')
 //                :
@@ -23419,7 +23419,7 @@ UE.commands['insertparagraph'] = {
 //
 //    function switchImgAndIframe( img2frame ) {
 //        var tmpdiv,
-//                nodes = domUtils.getElementsByTagName( me.document, !img2frame ? "iframe" : "img" );
+//                nodes = domUtils.getElementsByTagName( me.document, !img2frame ? "iframe" : "images" );
 //        for ( var i = 0, node; node = nodes[i++]; ) {
 //            if ( node.className != "edui-faked-webapp" ){
 //                continue;
@@ -23454,7 +23454,7 @@ UE.plugin.register('webapp', function (){
     var me = this;
     function createInsertStr(obj,toEmbed){
         return  !toEmbed ?
-            '<img title="'+obj.title+'" width="' + obj.width + '" height="' + obj.height + '"' +
+            '<images title="'+obj.title+'" width="' + obj.width + '" height="' + obj.height + '"' +
                 ' src="' + me.options.UEDITOR_HOME_URL + 'themes/default/images/spacer.gif" _logo_url="'+obj.logo+'" style="background:url(' + obj.logo
                 +') no-repeat center center; border:1px solid gray;" class="edui-faked-webapp" _url="' + obj.url + '" ' +
                 (obj.align && !obj.cssfloat? 'align="' + obj.align + '"' : '') +
@@ -23596,7 +23596,7 @@ UE.plugin.register('music', function (){
     var me = this;
     function creatInsertStr(url,width,height,align,cssfloat,toEmbed){
         return  !toEmbed ?
-                '<img ' +
+                '<images ' +
                     (align && !cssfloat? 'align="' + align + '"' : '') +
                     (cssfloat ? 'style="float:' + cssfloat + '"' : '') +
                     ' width="'+ width +'" height="' + height + '" _url="'+url+'" class="edui-faked-music"' +
@@ -23703,7 +23703,7 @@ UE.plugin.register('autoupload', function (){
         };
 
         if (filetype == 'image') {
-            loadingHtml = '<img class="loadingclass" id="' + loadingId + '" src="' +
+            loadingHtml = '<images class="loadingclass" id="' + loadingId + '" src="' +
                 me.options.themePath + me.options.theme +
                 '/images/spacer.gif" title="' + (me.getLang('autoupload.loading') || '') + '" >';
             successHandler = function(data) {
@@ -23720,7 +23720,7 @@ UE.plugin.register('autoupload', function (){
             };
         } else {
             loadingHtml = '<p>' +
-                '<img class="loadingclass" id="' + loadingId + '" src="' +
+                '<images class="loadingclass" id="' + loadingId + '" src="' +
                 me.options.themePath + me.options.theme +
                 '/images/spacer.gif" title="' + (me.getLang('autoupload.loading') || '') + '" >' +
                 '</p>';
@@ -24456,7 +24456,7 @@ UE.plugin.register('simpleupload', function (){
                 var allowFiles = me.getOpt('imageAllowFiles');
 
                 me.focus();
-                me.execCommand('inserthtml', '<img class="loadingclass" id="' + loadingId + '" src="' + me.options.themePath + me.options.theme +'/images/spacer.gif" title="' + (me.getLang('simpleupload.loading') || '') + '" >');
+                me.execCommand('inserthtml', '<images class="loadingclass" id="' + loadingId + '" src="' + me.options.themePath + me.options.theme +'/images/spacer.gif" title="' + (me.getLang('simpleupload.loading') || '') + '" >');
 
                 function callback(){
                     try{
@@ -24737,7 +24737,7 @@ UE.plugin.register('insertfile', function (){
                         icon = iconDir + getFileIcon(item.url);
                         title = item.title || item.url.substr(item.url.lastIndexOf('/') + 1);
                         html += '<p style="line-height: 16px;">' +
-                            '<img style="vertical-align: middle; margin-right: 2px;" src="'+ icon + '" _src="' + icon + '" />' +
+                            '<images style="vertical-align: middle; margin-right: 2px;" src="'+ icon + '" _src="' + icon + '" />' +
                             '<a style="font-size:12px; color:#0066cc;" href="' + item.url +'" title="' + title + '">' + title + '</a>' +
                             '</p>';
                     }

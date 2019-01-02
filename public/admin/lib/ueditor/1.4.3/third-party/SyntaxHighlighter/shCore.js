@@ -219,7 +219,7 @@ if (XRegExp) {
     // objects with `regex` and `backref` properties, in which case the named or numbered back-
     // references specified are passed forward to the next regex or returned. E.g.:
     // var xregexpImgFileNames = XRegExp.matchChain(html, [
-    //     {regex: /<img\b([^>]+)>/i, backref: 1}, // <img> tag attributes
+    //     {regex: /<images\b([^>]+)>/i, backref: 1}, // <images> tag attributes
     //     {regex: XRegExp('(?ix) \\s src=" (?<src> [^"]+ )'), backref: "src"}, // src attribute values
     //     {regex: XRegExp("^http://xregexp\\.com(/[^#?]+)", "i"), backref: 1}, // xregexp.com paths
     //     /[^\/]+$/ // filenames (strip directory paths)

@@ -304,7 +304,7 @@
                         uploader.on('fileQueued', function (file) {
                             var $li = $(
                                 '<div id="' + file.id + '" class="item">' +
-                                '<div class="pic-box"><img></div>' +
+                                '<div class="pic-box"><images></div>' +
                                 '<div class="info">' + file.name + '</div>' +
                                 '<p class="state">等待上传...</p>' +
                                 '</div>'
