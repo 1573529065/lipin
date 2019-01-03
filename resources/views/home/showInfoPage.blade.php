@@ -55,10 +55,10 @@
                         var bill = data[i];
                         var mli = li.replace("{0}", bill.title);
                         mli = mli.replace("{1}", bill.addr);
-                        var url = path + "/bill/toDetailDemand.php?id=" + bill.id;
+                        var url = path + "/index/toDetailDemand.php?id=" + bill.id;
                         mli = mli.replace("{2}", url);
 
-                        //	mli = mli.replace("{3}",bill.pubTimeStr);
+                        //	mli = mli.replace("{3}",index.pubTimeStr);
                         var $li = $(mli);
                         $li.find('a:last').css('backgroundImage', 'url(../../images/click1.png)');
                         $list.append($li);
@@ -70,7 +70,7 @@
 
         function getPurchaseBills() {
             $.ajax({
-                url: path + "/bill/listBills.php",
+                url: path + "/index/listBills.php",
                 success: function (map) {
                     var resultCode = map.resultCode;
                     if (resultCode == '1') {
@@ -98,7 +98,7 @@
         })();
 
 
-        var purl = "/bill/toPub.php";
+        var purl = "/index/Bill.php;
 
 
         function bindPubBtnEvent() {

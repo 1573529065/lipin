@@ -69,12 +69,12 @@
                         var bill = data[i];
                         var mli = li.replace("{0}", bill.title);
                         mli = mli.replace("{1}", bill.addr);
-                        var url = path + "/bill/toDetailDemand.php?id=" + bill.id;
+                        var url = path + "/index/toDetailDemand.php?id=" + bill.id;
                         mli = mli.replace("{2}", url);
 
-                        //	mli = mli.replace("{3}",bill.pubTimeStr);
+                        //	mli = mli.replace("{3}",index.pubTimeStr);
                         var $li = $(mli);
-                        $li.find('a:last').css('backgroundImage', 'url(../../images/click1.png)');
+                        $li.find('a:last').css('backgroundImage', 'asset(home/images/click1.png)');
                         $list.append($li);
                     }
                 }
@@ -84,7 +84,7 @@
 
         function getPurchaseBills() {
             $.ajax({
-                url: path + "/bill/listBills.php",
+                url: path + "/index/listBills.php",
                 success: function (map) {
                     var resultCode = map.resultCode;
                     if (resultCode == '1') {
@@ -103,26 +103,26 @@
         //}
 
 
-        var _hmt = _hmt || [];
-        (function () {
-            var hm = document.createElement("script");
-            hm.src = "https://hm.baidu.com/hm.js?b50d61958cf8e7ca6fc482c691187904";
-            var s = document.getElementsByTagName("script")[0];
-            s.parentNode.insertBefore(hm, s);
-        })();
+        // var _hmt = _hmt || [];
+        // (function () {
+        //     var hm = document.createElement("script");
+        //     hm.src = "https://hm.baidu.com/hm.js?b50d61958cf8e7ca6fc482c691187904";
+        //     var s = document.getElementsByTagName("script")[0];
+        //     s.parentNode.insertBefore(hm, s);
+        // })();
 
 
-        var purl = "/bill/toPub.php";
+        var purl = "{{url('/index/toPub')}}";
 
 
         function bindPubBtnEvent() {
 
             $(".pub").click(function (event) {
                 $.ajax({
-                    url: path + "/user/hasRealize.php",
+                    url: "{{url('/user/hasRealize')}}",
                     async: false,
                     success: function (result) {
-                        var resultCode = result.resultCode;
+                        var resultCode = result.data.resultCode;
                         if (resultCode == '1') {
                             goTo(purl);
                         } else if (resultCode == '-1') {

@@ -17,18 +17,18 @@
             src="{{asset('home/js/jquery.validate.min.js')}}"></script>
     <script
             src="{{asset('home/js/common.js')}}"></script>
-    <script type="text/javascript">
+    {{--<script type="text/javascript">--}}
 
-        var _hmt = _hmt || [];
-        (function () {
-            var hm = document.createElement("script");
-            hm.src = "https://hm.baidu.com/hm.js?45c68ef7725d1bdb84bcc4dfd9186b46";
-            var s = document.getElementsByTagName("script")[0];
-            s.parentNode.insertBefore(hm, s);
-        })();
+        {{--var _hmt = _hmt || [];--}}
+        {{--(function () {--}}
+            {{--var hm = document.createElement("script");--}}
+            {{--hm.src = "https://hm.baidu.com/hm.js?45c68ef7725d1bdb84bcc4dfd9186b46";--}}
+            {{--var s = document.getElementsByTagName("script")[0];--}}
+            {{--s.parentNode.insertBefore(hm, s);--}}
+        {{--})();--}}
 
 
-    </script>
+    {{--</script>--}}
     <style>
         *, body {
             margin: 0;
@@ -54,7 +54,7 @@
 <div data-role="page" id="personCenterPage">
     <script type="text/javascript">
         var path = "";
-        var purl = "/bill/toPub.php";
+        var purl = "/index/Bill.php";
 
 
         function bindPubBtnEvent() {
@@ -68,7 +68,8 @@
                         if (resultCode == '1') {
                             goTo(purl);
                         } else if (resultCode == '-1') {
-                            showMyPopup("<font color='red'>对不起,你尚未实名制!</font><br/><font><a href='/ucenter/toCenter.php'>请到个人中心进行实名！</a></font>", 0);
+                            showMyPopup("<font color='red'>对不起,你尚未实名制!</font><br/><font>" +
+                                "<a href='/ucenter/toCenter.php'>请到个人中心进行实名！</a></font>", 0);
 
                         } else {
                             showMyPopup("服务器异常,稍后再试!", 0);

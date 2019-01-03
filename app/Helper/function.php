@@ -1,27 +1,24 @@
 <?php
+/**
+ * Created by PhpStorm.
+ * User: zhw
+ * Date: 2019/1/3
+ * Time: 下午8:58
+ */
 
-namespace App\Http\Controllers;
-
-use Illuminate\Foundation\Bus\DispatchesJobs;
-use Illuminate\Routing\Controller as BaseController;
-use Illuminate\Foundation\Validation\ValidatesRequests;
-use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
-use Illuminate\Foundation\Auth\Access\AuthorizesResources;
-
-class Controller extends BaseController
-{
-    use AuthorizesRequests, AuthorizesResources, DispatchesJobs, ValidatesRequests;
-
-    /**
-     * 返回数据封装
-     *
-     * @param int $code
-     * @param string $message
-     * @param string $data
-    \\* @return Illuminate\Http\JsonResponse
-     * @author jreey
-     */
-    public static function _jsonMsg($first = 200, $message = "success", $data = null, $arr = [])
+/**
+ *
+ * 返回数据封装
+ *
+ * @param int $code
+ * @param string $message
+ * @param mixed $data
+ * @param bool $other
+ * @return Illuminate\Http\JsonResponse
+ * @author jreey and @ifehrim
+ */
+if (!function_exists("response_json1")) {
+    function response_json($first = 200, $message = "success", $data = null, $arr = [])
     {
         $param = func_get_args();
         /**

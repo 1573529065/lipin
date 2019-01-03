@@ -108,7 +108,7 @@
             });
         }
 
-        var purl = "/bill/toPub.php";
+        var purl = "/index/billphp";
 
         function bindPubBtnEvent() {
 

@@ -54,7 +54,7 @@
 <div data-role="page" id="personCenterPage">
     <script type="text/javascript">
         var path = "";
-        var purl = "/bill/toPub.php";
+        var purl = "/index/Bill.php;
 
 
         function bindPubBtnEvent() {

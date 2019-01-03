@@ -18,6 +18,10 @@
 // 前台路由
 Route::group(['namespace' => 'Home'], function () {
     Route::get('/index', 'Index@index');    // 首页
+    Route::get('/index/toPub', 'Index@toPub'); // 需求发布
+    Route::get('/bill/Bill', 'Bill@Bill'); // 验证用户是否认证
+
+    Route::get('/user/hasRealize', 'User@hasRealize'); // 验证用户是否认证
 
 
     Route::get('/suppli', 'Supplier@toSupplierMgr'); // 供应商库

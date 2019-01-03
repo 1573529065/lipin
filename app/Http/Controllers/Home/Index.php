@@ -16,15 +16,24 @@ class Index extends Front
      */
     public function index(){
 
-        return view('home.index');
+        return view('home.index.index');
     }
 
     /**
-     * 信息说明
-     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     * 采购需求发布
+     * @param Request $request
      */
-    public function info(){
+    public function toPub(Request $request)
+    {
+        return view('home.index.toPub');
+    }
 
-        return view('home.info');
+    /**
+     * 查看需求详情
+     * @param Request $request
+     */
+    public function toDetailDemand(Request $request)
+    {
+        return '查看需求详情';
     }
 }
