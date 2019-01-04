@@ -95,13 +95,14 @@
                     <span style="font-weight:bold;">余生</span>
                 </td>
                 <td>
-                    <span style="font-weight:bold;">金币</span><!--<span><images src="{{asset('home/images/gold.png')}}" alt="没有图片" style="padding:5px;height:32px;"></span>-->
-                    <span style="color:red;font-weight:bold;min-height:32px;">0</span><span
-                            style="font-weight:bold;">枚</span>
+                    <span style="font-weight:bold;">金币</span>
+                    <span><images src="{{asset('/home/images/gold.png')}}" alt="没有图片" style="padding:5px;height:32px;" /> </span>
+                    <span style="color:red;font-weight:bold;min-height:32px;">0</span>
+                    <span style="font-weight:bold;">枚</span>
 
                 </td>
                 <td>
-                    <a href="/user/logout.php" data-ajax="false" data-role="button"
+                    <a href="{{url('/user/logout')}}" data-ajax="false" data-role="button"
                        class="ui-btn ui-btn-inline ui-btn-icon-left ui-icon-power">退出</a>
                 </td>
             </tr>
@@ -126,13 +127,13 @@
                 </ul>
             </div>
 
-            <div data-role="collapsible">
-                <h3>我的拜访/受访管理</h3>
-                <ul data-role="listview" data-inset="false">
-                    <li><a href="/visit/toMyVisits.php" data-ajax="false" data-transition="flip">我的受访申请</a></li>
-                    <li><a href="/visit/toMyApplys.php" data-ajax="false" data-transition="flip">我的拜访申请</a></li>
-                </ul>
-            </div>
+            {{--<div data-role="collapsible">--}}
+                {{--<h3>我的拜访/受访管理</h3>--}}
+                {{--<ul data-role="listview" data-inset="false">--}}
+                    {{--<li><a href="/visit/toMyVisits.php" data-ajax="false" data-transition="flip">我的受访申请</a></li>--}}
+                    {{--<li><a href="/visit/toMyApplys.php" data-ajax="false" data-transition="flip">我的拜访申请</a></li>--}}
+                {{--</ul>--}}
+            {{--</div>--}}
 
             <div data-role="collapsible">
                 <h3>我的金币管理</h3>
@@ -187,8 +188,7 @@
             </ul>
         </div>
         <div style="align:center;line-height:2em;font-size:0.5em;margin-left:8em;">
-            {{--<a href="http://www.miibeian.gov.cn">苏ICP备17016930号-2</a>--}}
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;版权：销售与采购联盟
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;版权：礼品界销售与采购联盟
         </div>
     </div>
 </div>

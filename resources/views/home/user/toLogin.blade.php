@@ -4,15 +4,13 @@
     <title>用户登录</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="/css/jquery.mobile-1.4.5.css"/>
-    <script type="text/javascript"
-            src="{{asset('home/js/jquery.js')}}"></script>
-    <script type="text/javascript"
-            src="{{asset('home/js/jquery.form.js')}}"></script>
-    <script type="text/javascript"
-            src="{{asset('home/js/jquery.validate.min.js')}}"></script>
-    <script
-            src="{{asset('home/js/jquery.mobile-1.4.5.js')}}"></script>
+    <link rel="stylesheet" href="{{asset('home/css/jquery.mobile-1.4.5.css')}}"/>
+
+    <script type="text/javascript" src="{{asset('home/js/jquery.js')}}"></script>
+    <script type="text/javascript" src="{{asset('home/js/jquery.form.js')}}"></script>
+    <script type="text/javascript" src="{{asset('home/js/jquery.validate.min.js')}}"></script>
+
+    <script src="{{asset('home/js/jquery.mobile-1.4.5.js')}}"></script>
     <script src="{{asset('home/js/common.js')}}"></script>
     <script src="{{asset('home/js/jquery.cookie.js')}}"></script>
 
@@ -20,22 +18,27 @@
         var path = "";
         var fileSize = "3";
         var _hmt = _hmt || [];
-        (function () {
-            var hm = document.createElement("script");
-            hm.src = "https://hm.baidu.com/hm.js?df6cdbe16936f2cd964ed965155993d8";
-            var s = document.getElementsByTagName("script")[0];
-            s.parentNode.insertBefore(hm, s);
-        })();
+
+        // (function () {
+        //     var hm = document.createElement("script");
+        //     hm.src = "https://hm.baidu.com/hm.js?df6cdbe16936f2cd964ed965155993d8";
+        //     var s = document.getElementsByTagName("script")[0];
+        //     s.parentNode.insertBefore(hm, s);
+        // })();
+
         var rememberPwd = -1;
         $(document).on("pageinit", "#loginPage", function () {
+
             jQuery.validator.addMethod("mobile", function (value, element) {
                 var pattern = /^1[3|4|5|7|8]\d{9}$/gi;
                 return this.optional(element) || (pattern.test(value));
             }, "非法的手机号码!");
+
             var t = new Date().getTime();
             var storage = window.localStorage;
             var mobile = storage.getItem("mobile");
             var pwd = storage.getItem("pwd");
+
             if (mobile) {
                 $("#pwd").val(pwd);
                 $("#mobile").val(mobile);
@@ -135,9 +138,6 @@
     <section>
         <div style="width:100%;height:40%;">
             <img id="login_img" style="width:99%;height:100%;">
-            <!-- <a href="http://www.hdb.com/party/jccsb.html">
-
-            </a> -->
         </div>
     </section>
     <div data-role="main" class="ui-content" id="loginContent">
@@ -151,14 +151,16 @@
 
             <br/>
             <a href="#" class="ui-btn ui-btn-inline" onClick="login();" style="width:50px;height:19px;">登录</a>
-            <a href="/user/toForgotMM.php" data-ajax="false" data-transition="flip"
+
+            <a href="{{asset('user/toForgotMM')}}" data-ajax="false" data-transition="flip"
                style="font-size: 0.75em;margin-left:5em;text-decoration: none;">忘记密码</a>
+
         </form>
         <div class="toRegDiv">
             &nbsp;&nbsp;未建立帐号？
 
 
-            <a href="/user/toRegister.php" data-ajax="false" style="text-decoration: none;"
+            <a href="{{url('user/toRegister')}}" data-ajax="false" style="text-decoration: none;"
                data-transition="flip">点击注册</a>
 
 
