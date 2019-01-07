@@ -38,6 +38,7 @@ Route::group(['namespace' => 'Home'], function () {
     Route::post('user/registerUser', 'User@registerUser');
     Route::get('user/toRegister', 'User@toRegister');   // 注册
     Route::get('user/toForgotMM', 'User@toForgotMM');   // 忘记密码
+    Route::get('user/getCheckCode', 'User@getCheckCode');   // 获取验证码
 
 
 });

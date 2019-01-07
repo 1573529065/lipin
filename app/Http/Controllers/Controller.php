@@ -77,4 +77,17 @@ class Controller extends BaseController
         return response()->json($array);
     }
 
+    //发送验证码
+    public function Sms($tel, $num)
+    {
+        $account = getenv('SMS_YZM_APPID'); //账号 AppID
+        $password = strtoupper(md5(getenv('SMS_YZM_APPKEY')));   //密码 AppKey
+
+        $content = '您本次的验证码为' . $num . '，感谢您的支持！';
+        $url = "http://api.chanzor.com/send?account=" . $account . "&password=" . $password . "&mobile=" . $tel . "&content=" . $content;
+        $file = file_get_contents($url);
+        $file = json_decode($file);
+        return $file;
+    }
+
 }

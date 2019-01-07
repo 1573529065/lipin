@@ -31,7 +31,7 @@
             $("#regButton").hide();
             $("#agreement").removeAttr("checked");
             jQuery.validator.addMethod("mobile", function (value, element) {
-                var pattern = /^1[3|4|5|7|8]\d{9}$/gi;
+                var pattern = /^1[3|4|5|6|7|8|9]\d{9}$/gi;
                 return this.optional(element) || (pattern.test(value));
             }, "非法的手机号码!");
             jQuery.validator.addMethod("isAgree", function (value, element) {
@@ -72,24 +72,28 @@
                 var mobile = $.trim($("#reg_mobile").val());
                 if (mobile != '') {
                     $.ajax({
-                        url: path + '/user/getCheckCode.php',
+                        url: "{{url('/user/getCheckCode')}}",
                         data: {mobile: mobile},
                         success: function (data) {
+                            var count = 60;
+                            var resend = setInterval(function () {
+                                count--;
+                                if (count > 0) {
+                                    btn.val(count + "秒后可重新获取");
+                                    $.cookie("captcha", count, {path: '/', expires: (1 / 86400) * count});
+                                } else {
+                                    clearInterval(resend);
+                                    btn.val("获取验证码").removeAttr('disabled');
+                                }
+                            }, 1000);
+                            btn.attr('disabled', true).css('cursor', 'not-allowed');
                         }
                     });
+                }else {
+                    alert('手机号不能为空');
+                    window.location.reload();
                 }
-                var count = 60;
-                var resend = setInterval(function () {
-                    count--;
-                    if (count > 0) {
-                        btn.val(count + "秒后可重新获取");
-                        $.cookie("captcha", count, {path: '/', expires: (1 / 86400) * count});
-                    } else {
-                        clearInterval(resend);
-                        btn.val("获取验证码").removeAttr('disabled');
-                    }
-                }, 1000);
-                btn.attr('disabled', true).css('cursor', 'not-allowed');
+
             });
 
             $("#regForm").validate({
@@ -136,6 +140,8 @@
         });
 
         function registerUser() {
+            console.log($("#regForm").valid());
+            return false;
 
             if ($("#regForm").valid()) {
                 $("#regForm").ajaxSubmit({

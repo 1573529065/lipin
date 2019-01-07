@@ -72,8 +72,15 @@ class User extends Front
      * 发送验证码
      * @param Request $request
      */
-    public function getCode(Request $request)
+    public function getCheckCode(Request $request)
     {
+        $mobile = $request->input('mobile');
+        if (!$mobile) return parent::_jsonMsg(4001, '手机号不能为空');
+
+        $num = rand(1000, 9999);
+        parent::Sms($mobile, $num);
+
+        dd($request);
 
     }
 }
