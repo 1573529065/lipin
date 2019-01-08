@@ -73,7 +73,7 @@
                 if (mobile != '') {
                     $.ajax({
                         url: "{{url('/user/getCheckCode')}}",
-                        data: {mobile: mobile},
+                        data: {mobile: mobile,type: 2},
                         success: function (data) {
                             var count = 60;
                             var resend = setInterval(function () {

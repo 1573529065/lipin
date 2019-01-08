@@ -10,8 +10,11 @@ namespace App\Http\Controllers\Home;
 
 
 
+use App\Models\Authcode;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Cookie;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Log;
 
 class User extends Front
 {
@@ -75,12 +78,32 @@ class User extends Front
     public function getCheckCode(Request $request)
     {
         $mobile = $request->input('mobile');
+        $type = $request->input('type', 1);
         if (!$mobile) return parent::_jsonMsg(4001, '手机号不能为空');
 
-        $num = rand(1000, 9999);
-        parent::Sms($mobile, $num);
+        try{
+            DB::beginTransaction();
+            $num = rand(1000, 9999);
+            $code = parent::Sms($mobile, $num);
 
-        dd($request);
+            Authcode::create([
+                'phone' => $mobile,
+                'code' => $code,
+                'status' => 0,
+                'type' => $type,
+                'over_time' => date('Y-m-d H:i:s', time()+900),
+            ]);
+
+
+            DB::commit();
+
+            return response_json(200, 'success');
+        }catch (\Exception $e){
+            DB::rollBack();
+            Log::debug('发送验证码', ['info' => $e->getMessage()]);
+            return response_json(500, '服务器错误');
+        }
+
 
     }
 }
