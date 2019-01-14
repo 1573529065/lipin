@@ -17,7 +17,7 @@
  * @return Illuminate\Http\JsonResponse
  * @author jreey and @ifehrim
  */
-if (!function_exists("response_json1")) {
+if (!function_exists("response_json")) {
     function response_json($first = 200, $message = "success", $data = null, $arr = [])
     {
         $param = func_get_args();
